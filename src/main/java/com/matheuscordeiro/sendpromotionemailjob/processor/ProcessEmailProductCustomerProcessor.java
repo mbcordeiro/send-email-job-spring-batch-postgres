@@ -18,6 +18,7 @@ public class ProcessEmailProductCustomerProcessor implements ItemProcessor<Produ
 		email.setTo(productCustomerInterest.getCustomer().getEmail());
 		email.setSubject("Promotion Sale!!!!");
 		email.setText(generateTextPromotion(productCustomerInterest));
+		Thread.sleep(2000);
 		return email;
 	}
 
